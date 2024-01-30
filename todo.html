@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <p id="date">current date</p>
+    Enter Your work here<input type="text" id="work">
+    <button id="enter">Enter</button>
+
+
+    <ul id="list">Your work</ul>
+
+    <script>
+        let date = document.getElementById("date")
+        let d = new Date();
+        document.getElementById('enter').addEventListener('click', function () {
+            let wr = document.getElementById('work').value
+            let cc = document.getElementById('list').innerHTML;
+            let nc = cc + '<li>' + wr + '</li>'
+            document.getElementById('list').innerHTML = nc;
+        })
+        date.innerHTML = d
+        date.style.color = "red"
+    </script>
+
+
+</body>
+
+</html>
